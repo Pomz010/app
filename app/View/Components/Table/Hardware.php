@@ -12,13 +12,13 @@ class Hardware extends Component
      * Create a new component instance.
      */
     public $hardwareAssets;
-    public $laptops;
+    // public $laptops;
     public $systemUnits;
-    public function __construct($hardwareAssets, $laptops, $systemUnits)
+    public function __construct($hardwareAssets, $systemUnits)
     {
         // dd($hardwareAssets);
         $this->hardwareAssets = $hardwareAssets;
-        $this->laptops = $laptops;
+        // $this->laptops = $laptops;
         $this->systemUnits = $systemUnits;
     }
 

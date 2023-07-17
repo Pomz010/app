@@ -14,9 +14,9 @@ class AssetController extends Controller
         if(auth()->check()){
             Session::put('previousPage', request()->fullUrl());
             $hardwareAssets = HardwareAsset::all();
-            $laptops = HardwareAsset::where('item', '=', 'laptop')->take(10)->get();
+            // $laptops = HardwareAsset::where('item', '=', 'laptop')->take(10)->get();
             $systemUnits = HardwareAsset::where('item', '=', 'system unit')->take(10)->get();
-            return view('components.nav-contents.asset-monitoring', compact('hardwareAssets', 'laptops', 'systemUnits'));
+            return view('components.nav-contents.asset-monitoring', compact('hardwareAssets', 'systemUnits'));
         } else {
             return redirect('/');
         }

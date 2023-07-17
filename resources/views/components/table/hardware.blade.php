@@ -42,7 +42,7 @@
     {{-- Table --}}
     <div id="categories" class="p-2 bg-white rounded-lg">
       <x-table.all-assets :hardwareAssets='$hardwareAssets' />
-      <x-table.laptop-category :laptops='$laptops' />
+      <livewire:tables.laptop />
       <x-table.system-unit-category :systemUnits='$systemUnits' />
       <x-table.monitor-category />
       <x-table.printer-category />

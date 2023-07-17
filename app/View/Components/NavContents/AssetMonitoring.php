@@ -12,12 +12,12 @@ class AssetMonitoring extends Component
      * Create a new component instance.
      */
     public $hardwareAssets;
-    public $laptops;
+    // public $laptops;
     public $systemUnits;
     public function __construct($hardwareAssets, $laptops, $systemUnits)
     {
         $this->hardwareAssets = $hardwareAssets;
-        $this->laptops = $laptops;
+        // $this->laptops = $laptops;
         $this->systemUnits = $systemUnits;
     }
 

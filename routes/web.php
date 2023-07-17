@@ -1,5 +1,6 @@
 <?php
 
+use Livewire\Livewire;
 use App\Models\Department;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -53,3 +54,6 @@ Route::get('/create-department/{department}', [DepartmentController::class, 'cre
 Route::post('/create-department/business-unit', [BusinessUnitController::class, 'store'])->name('business-unit.store');
 Route::post('/create-department/department', [DepartmentController::class, 'store'])->name('department.store');
 Route::post('/create-department/section', [SectionController::class, 'store'])->name('section.store');
+
+
+Livewire::component('laptop', Laptop::class);
