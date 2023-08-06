@@ -1,5 +1,5 @@
 
-<table id="router" class="table-auto border border-collapse hidden">
+<table id="router" class="table-auto border border-collapse">
     <thead>
       <tr class="">
         <th class="border px-2 py-1">#</th>

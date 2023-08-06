@@ -105,8 +105,17 @@ export default class TabContents{
 
             case 'hardware':
                 visibleTable = document.querySelector('#hardwareTable');
-                visibleTable.classList.remove('hidden');
+                
                 this.hideTable(visibleTable);
+
+                categories.forEach(category => {
+                    if(category.id != visibleTable && !category.classList.contains('hidden') ){
+                        category.classList.add('hidden');
+                    }
+                })
+
+                document.querySelector('#assetsTable').classList.remove('hidden');
+                visibleTable.classList.remove('hidden');
                 break;
 
 
@@ -185,12 +194,20 @@ export default class TabContents{
                 visibleTable = document.querySelector('#laptop');
 
                 categories.forEach(category => {
-                    if(category.id !== 'laptop'){
+                    console.log(visibleTable.id)
+                    if(category.id !== visibleTable.id){
+                        console.log(visibleTable.id)
                         category.classList.add('hidden');
                     }
+
+                    // if(visibleTable.classList.contains('hidden')){
+                    //     visibleTable.classList.remove('hidden');
+                    // }
+                    
                 })
 
                 visibleTable.classList.remove('hidden');
+
                 break;
 
 

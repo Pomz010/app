@@ -5,20 +5,19 @@ namespace App\Http\Livewire\Tables;
 use Livewire\Component;
 use App\Models\HardwareAsset;
 
-class Laptop extends Component
+class SystemUnit extends Component
 {
-    // public $test;
-    public $laptops;
+    public $systemUnits;
     public $sortField;
     public $sortDirection = 'asc';
 
     public function mount(){
         $this->sortField = 'asset_tag';
-        $this->sortLaptop();
+        $this->sort();
     }
 
-    public function sortLaptop(){
-        $this->laptops  = HardwareAsset::orderBy($this->sortField, $this->sortDirection)->get();
+    public function sort(){
+        $this->systemUnits  = HardwareAsset::orderBy($this->sortField, $this->sortDirection)->get();
     }
 
     public function sortBy($field)
@@ -30,16 +29,11 @@ class Laptop extends Component
             $this->sortDirection = 'asc';
         }
 
-        $this->sortLaptop();
+        $this->sort();
     }
-
-    // public function testClick($action){
-    //     $this->test = $action;
-    // }
 
     public function render()
     {
-        // dd($this->laptops);
-        return view('livewire.tables.laptop');
+        return view('livewire.tables.system-unit');
     }
 }

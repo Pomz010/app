@@ -3,7 +3,7 @@
     <thead>
       <tr class="">
         <th class="border px-2 py-1">#</th>
-        <th class="border px-2 py-1 cursor-pointer">Asset Tag</th>
+        <th wire:click='sortBy("asset_tag")' class="border px-2 py-1 cursor-pointer">Asset Tag</th>
         <th class="border px-2 py-1">Brand</th>
         <th class="border px-2 py-1">Board Model</th>
         <th class="border px-2 py-1">Processor</th>
@@ -28,6 +28,7 @@
       <tr>
         <td class="border px-2 py-1">{{ $counter++ }}</td>
         <td class="border px-2 py-1">{{ $systemUnit->asset_tag }}</td>
+        {{-- <td class="border px-2 py-1">{{ $systemUnit->item }}</td> --}}
         <td class="border px-2 py-1">{{ $systemUnit->brand }}</td>
         <td class="border px-2 py-1">{{ $systemUnit->motherboard }}</td>
 
