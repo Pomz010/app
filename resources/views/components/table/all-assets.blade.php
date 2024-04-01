@@ -40,8 +40,6 @@
         <td class="border px-2 py-1">{{ $asset->price }}</td>
         <td class="border px-2 py-1"></td>
         <td class="border px-2 py-1"></td>
-        <td class="border px-2 py-1"><a href="{{ route('assets.edit', ['asset' => $asset->id]) }}">Edit</a></td>
       @endforeach
-      </tr>
     </tbody>
 </table>
